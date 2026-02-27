@@ -4,5 +4,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-client = AsyncIOMotorClient(os.getenv("MONGODB_URL"))
+url = os.getenv("MONGODB_URL")
+
+client = AsyncIOMotorClient(
+    url,
+    tls=True,
+    tlsAllowInvalidCertificates=True
+)
 db = client[os.getenv("DB_NAME")]
