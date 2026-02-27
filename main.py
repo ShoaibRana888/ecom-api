@@ -8,7 +8,7 @@ app = FastAPI(title="EcomAnalytics API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://ecom-analytics-ten.vercel.app/",
+        "https://ecom-analytics-ten.vercel.app",
     ],
     allow_methods=["*"],
     allow_headers=["*"],
